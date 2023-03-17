@@ -4,10 +4,14 @@ import HomeVue from '../pages/HomeVue.vue';
 const routes = [
   {
     path: '/',
+    redirect : '/home'
+  },
+  {
+    path: '/home',
     component: HomeVue
   },
   {
-    path: '/projeck',
+    path: '/Project',
     name: 'projeck',
     component: () => import( '../pages/ProjeckVue.vue')
   }

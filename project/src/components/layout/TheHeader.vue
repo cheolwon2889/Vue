@@ -1,112 +1,92 @@
 <template>
   <header>
-    <nav>
-      <h1><router-link to="/">My Portfolio</router-link></h1>
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/projeck" >Projeck</router-link></li>
-        <li><router-link to="/contact" >Contact</router-link></li>
-      </ul>
-    </nav>
+    <div class="nav container">
+      <router-link to="/" class="logo"> Port<span>folio</span> </router-link>
+      <div class="navbar">
+        <router-link to="/home" class="nav-link">
+          <i class="bx bx-home"></i>
+          <span class="nav-link-title">Home</span>
+        </router-link>
+        <router-link to="/Project" class="nav-link">
+          <i class='bx bx-window-alt'></i>
+          <span class="nav-link-title">Project</span>
+        </router-link>
+        <router-link to="/Explore" class="nav-link">
+          <i class='bx bxs-user-detail'></i>
+          <span class="nav-link-title">Introduction</span>
+        </router-link>
+        <router-link to="/Contact" class="nav-link">
+          <i class='bx bx-phone-call' ></i>
+          <span class="nav-link-title">Contact</span>
+        </router-link>
+      </div>
+    </div>
   </header>
 </template>
 
-<script>
-export default {
-  
-};
-</script>
-
 <style scoped>
+.container {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10%;
   background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-header a {
-  font-size: 18px;
-  color: #fff;
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid transparent;
-  font-weight: 500;
-  margin-left: 20px;
-  transition: 0.3s;
+  z-index: 100;
 }
 
-header ul a:active,
-header ul a:hover,
-header ul a.router-link-active {
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.bx {
+  cursor: pointer;
+}
+.logo {
+  font-size: 1.4rem;
+  color: #fcfeff;
+  font-weight: 600;
+  margin: 0 auto 0 0;
+}
+.logo span {
+  color: #ffb43a;
+}
+
+.navbar {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 18px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.1rem;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #d7d7d7;
+}
+
+.nav-link:hover,
+a.router-link-active {
   color: #0ef;
+  transition: 0.3s all linear;
+  transform: scale(1.2);
 }
 
-h1 {
-  margin: 0;
+.nav-link .bx {
+  font-size: 1.6rem;
 }
 
-h1 a {
-  color: white;
-  margin: 0;
-  font-size: 24px;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
-}
-
-h1 a:hover,
-h1 a:active,
-h1 a.router-link-active {
-  border-color: transparent;
-}
-
-header nav {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
-}
-
-li {
-  margin: 0 0.5rem;
-}
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideTop {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.nav-link-title {
+  font-size: 0.7rem;
 }
 </style>

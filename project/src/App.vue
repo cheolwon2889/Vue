@@ -16,7 +16,6 @@ export default {
 * {
   box-sizing: border-box;
   padding: 0;
-  box-sizing: border-box;
   scroll-padding-top: 2rem;
   text-decoration: none;
   list-style: none;

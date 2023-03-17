@@ -1,8 +1,9 @@
 <template>
   <section class="home">
     <div class="home-content">
-      <h2>안녕하세요! <span>Front-end</span> 개발자</h2>
+      <h2><span>Front-end</span> 개발자</h2>
       <h1>김철원 입니다.</h1>
+      <h2>안녕하세요!</h2>
       <p>
         저는
         <strong>
@@ -11,8 +12,12 @@
         개발자 입니다.
       </p>
       <div class="social-media">
-        <a href="https://cheolwonkim.tistory.com/"><i class='bx bxl-blogger'></i></a>
-        <a href="https://github.com/cheolwon2889"><i class="bx bxl-github"></i></a>
+        <a href="https://cheolwonkim.tistory.com/"
+          ><i class="bx bxl-blogger"></i
+        ></a>
+        <a href="https://github.com/cheolwon2889"
+          ><i class="bx bxl-github"></i
+        ></a>
       </div>
     </div>
     <!-- 일단 아무 이미지 넣었음 -->
@@ -43,10 +48,10 @@ export default {
   padding: 70px 10% 0;
 }
 .home-content h2 {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 .home-content h1 {
-    margin: 10px 0;
+  margin: 10px 0;
   font-size: 46px;
   font-weight: 700;
 }
@@ -56,7 +61,7 @@ export default {
 }
 
 .home img {
-  max-width: 650px;
+  max-width: 750px;
   opacity: 0;
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
   animation-delay: 0s, 1.3s;
@@ -79,7 +84,7 @@ export default {
 }
 
 .home-content p {
-    font-size: 24px;
+  font-size: 24px;
 }
 .social-media a:hover {
   background: #0ef;
